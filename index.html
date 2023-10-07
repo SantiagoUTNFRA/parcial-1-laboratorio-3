@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Formularios</title>
+</head>
+
+<body>
+  <div class="form-datos">
+    <h2>Form Datos</h2>
+
+    <label for="filter">Filtrar Por:</label>
+    <select id="filter">
+      <option value="todos">Todos</option>
+      <option value="terrestres">Terrestres</option>
+      <option value="aereos">Aereos</option>
+    </select>
+    <br />
+    <label for="calcular-vel-promedio">Velocidad Máxima Promedio</label>
+    <input type="text" name="calcular-vel-promedio" readonly />
+    <button id="calcular" type="button">Calcular</button>
+    <fieldset>
+      <legend>Mostrar Columnas:</legend>
+      <input type="checkbox" id="id" checked /> <label for="id">ID</label>
+      <input type="checkbox" id="modelo" checked /> <label for="modelo">Modelo</label>
+      <input type="checkbox" id="anoFab" checked /> <label for="anioFab">Año de Fabricación</label>
+      <input type="checkbox" id="velMax" checked /> <label for="velMax">Velocidad Máxima</label>
+      <input type="checkbox" id="altMax" checked/> <label for="altMax">Altura Máxima</label>
+      <input type="checkbox" id="autonomia" checked/> <label for="autonomia">Autonomía</label>
+      <input type="checkbox" id="cantPuertas" checked/> <label for="cantPue">Cantidad de Puertas</label>
+      <input type="checkbox" id="cantRuedas" checked/> <label for="cantRue">Cantidad de Ruedas</label>
+    </fieldset>
+
+    <h1>Mi Tabla de Datos</h1>
+    <table id="miTabla">
+      <thead>
+        <tr>
+          <th id="id-header">ID</th>
+          <th id="modelo-header">Modelo</th>
+          <th id="anoFab-header">Año de Fabricación</th>
+          <th id="velMax-header">Velocidad Máxima</th>
+          <th id="altMax-header">Altura Máxima</th>
+          <th id="autonomia-header">Autonomía</th>
+          <th id="cantPuer-header">Cantidad de Puertas</th>
+          <th id="cantRue-header">Cantidad de Ruedas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- datos -->
+      </tbody>
+    </table>
+    <button id="boton-agregar">Agregar</button>
+  </section>
+
+
+    <!-- Formulario ABM -->
+    <section>
+      <form id="frmAbm" class="hidden">
+        <label for="id-abm">Id:</label>
+        <input type="text" id="id-abm" readonly />
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" />
+        <label for="anoFab">Año de Fabricación:</label>
+        <input type="text" id="anoFab" />
+        <label for="velMax">Velocidad Máxima:</label>
+        <input type="text" id="velMax" />
+        
+        <!-- aereos -->
+        <label for="altMax-abm" class="hidden">Altura Máxima:</label>
+        <input type="text" id="altMax-abm" class="hidden" />
+        <label for="autonomia-abm" class="hidden">Autonomía:</label>
+        <input type="text" id="autonomia-abm" class="hidden" />
+        
+        <!-- terrestres -->
+        <label for="cantPuertas-abm" class="hidden">Cantidad de Puertas:</label>
+        <input type="text" id="cantPuertas-abm" class="hidden" />
+        <label for="cantRue-abm" class="hidden">Cantidad de Ruedas:</label>
+        <input type="text" id="cantRue-abm" class="hidden" />
+        
+        <select id="tipo">
+          <option value="" selected>Seleccione tipo</option>
+          <option value="aereo">Aereo</option>
+          <option value="terrestre">Terrestre</option>
+        </select>
+    
+        <button type="submit" id="aceptar">Aceptar</button>
+        <button type="button" id="modificar">Modificar</button>
+        <button type="button" id="eliminar">Eliminar</button>
+        <button type="button" id="cancelar">Cancelar</button>
+      </form>
+    </section>
+
+    <script type="module" src="./js/scripts.js"></script>
+</body>
+
+</html>
